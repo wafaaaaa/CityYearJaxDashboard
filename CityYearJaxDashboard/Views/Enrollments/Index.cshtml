@@ -58,11 +58,11 @@
     </ul>
     <br />
     <input type="reset" />
-    <input type="button" value="Generate" onclick="window.location.href=("Generate", "View", "Enrollments");" />
+    <input type="button" value="Generate" onclick="" />
     <hr />
     <h2>Goals</h2>
     <p>
-        @Html.ActionLink("Create New", "Create")
+      Create New | Edit | Details | Delete
     </p>
     <table class="table">
         <tr>
@@ -100,7 +100,7 @@
             <th></th>
         </tr>
 
-        @foreach (var item in Model)
+       @*@foreach (var item in Model)
         {
             <tr>
                 <td>
@@ -140,7 +140,7 @@
                 </td>
             </tr>
         }
-
+           *@
     </table>
 
 </body>

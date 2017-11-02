@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CYJDashboardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Attendance">
+          <Key>
+            <PropertyRef Name="Attendance_ID" />
+          </Key>
+          <Property Name="Attendance_ID" Type="int" Nullable="false" />
+          <Property Name="Enrollment_ID" Type="int" Nullable="false" />
+          <Property Name="Dosage_ID" Type="int" Nullable="false" />
+          <Property Name="Prevention_ID" Type="int" Nullable="false" />
+          <Property Name="Growth_ID" Type="int" Nullable="false" />
+          <Property Name="Recovery_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Dashboard">
+          <Key>
+            <PropertyRef Name="Dashboard_ID" />
+          </Key>
+          <Property Name="Dashboard_ID" Type="int" Nullable="false" />
+          <Property Name="ServiceDelivery_ID" Type="int" Nullable="false" />
+          <Property Name="CorpsMemberExp_ID" Type="int" Nullable="false" />
+          <Property Name="ExternalAffairs_ID" Type="int" Nullable="false" />
+          <Property Name="Revenue_ID" Type="int" Nullable="false" />
+          <Property Name="OperationsExpense_ID" Type="int" Nullable="false" />
+          <Property Name="RAD_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Enrollment">
+          <Key>
+            <PropertyRef Name="Enrollment_ID" />
+          </Key>
+          <Property Name="Enrollment_ID" Type="int" Nullable="false" />
+          <Property Name="AnnualGoal" Type="int" />
+          <Property Name="BestofCYGoal" Type="int" />
+          <Property Name="Q1Goal" Type="int" />
+          <Property Name="Q1Actual" Type="int" />
+          <Property Name="Q2Goal" Type="int" />
+          <Property Name="Q2Actual" Type="int" />
+          <Property Name="Q3Goal" Type="int" />
+          <Property Name="Q3Actual" Type="int" />
+          <Property Name="Q4Goal" Type="int" />
+          <Property Name="Q4Actual" Type="int" />
+        </EntityType>
+        <EntityType Name="ServiceDelivery">
+          <Key>
+            <PropertyRef Name="ServiceDelivery_ID" />
+          </Key>
+          <Property Name="ServiceDelivery_ID" Type="int" Nullable="false" />
+          <Property Name="ELA_ID" Type="int" Nullable="false" />
+          <Property Name="Math_ID" Type="int" Nullable="false" />
+          <Property Name="Attendance_ID" Type="int" Nullable="false" />
+          <Property Name="Behavior_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CYJDashboardModelStoreContainer">
+          <EntitySet Name="Attendance" EntityType="Self.Attendance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dashboard" EntityType="Self.Dashboard" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Enrollment" EntityType="Self.Enrollment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceDelivery" EntityType="Self.ServiceDelivery" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CYJDashboardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Attendance">
+          <Key>
+            <PropertyRef Name="Attendance_ID" />
+          </Key>
+          <Property Name="Attendance_ID" Type="Int32" Nullable="false" />
+          <Property Name="Enrollment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Dosage_ID" Type="Int32" Nullable="false" />
+          <Property Name="Prevention_ID" Type="Int32" Nullable="false" />
+          <Property Name="Growth_ID" Type="Int32" Nullable="false" />
+          <Property Name="Recovery_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Dashboard">
+          <Key>
+            <PropertyRef Name="Dashboard_ID" />
+          </Key>
+          <Property Name="Dashboard_ID" Type="Int32" Nullable="false" />
+          <Property Name="ServiceDelivery_ID" Type="Int32" Nullable="false" />
+          <Property Name="CorpsMemberExp_ID" Type="Int32" Nullable="false" />
+          <Property Name="ExternalAffairs_ID" Type="Int32" Nullable="false" />
+          <Property Name="Revenue_ID" Type="Int32" Nullable="false" />
+          <Property Name="OperationsExpense_ID" Type="Int32" Nullable="false" />
+          <Property Name="RAD_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Enrollment">
+          <Key>
+            <PropertyRef Name="Enrollment_ID" />
+          </Key>
+          <Property Name="Enrollment_ID" Type="Int32" Nullable="false" />
+          <Property Name="AnnualGoal" Type="Int32" />
+          <Property Name="BestofCYGoal" Type="Int32" />
+          <Property Name="Q1Goal" Type="Int32" />
+          <Property Name="Q1Actual" Type="Int32" />
+          <Property Name="Q2Goal" Type="Int32" />
+          <Property Name="Q2Actual" Type="Int32" />
+          <Property Name="Q3Goal" Type="Int32" />
+          <Property Name="Q3Actual" Type="Int32" />
+          <Property Name="Q4Goal" Type="Int32" />
+          <Property Name="Q4Actual" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ServiceDelivery">
+          <Key>
+            <PropertyRef Name="ServiceDelivery_ID" />
+          </Key>
+          <Property Name="ServiceDelivery_ID" Type="Int32" Nullable="false" />
+          <Property Name="ELA_ID" Type="Int32" Nullable="false" />
+          <Property Name="Math_ID" Type="Int32" Nullable="false" />
+          <Property Name="Attendance_ID" Type="Int32" Nullable="false" />
+          <Property Name="Behavior_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="CYJDashboardEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Attendances" EntityType="Self.Attendance" />
+          <EntitySet Name="Dashboards" EntityType="Self.Dashboard" />
+          <EntitySet Name="Enrollments" EntityType="Self.Enrollment" />
+          <EntitySet Name="ServiceDeliveries" EntityType="Self.ServiceDelivery" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CYJDashboardModelStoreContainer" CdmEntityContainer="CYJDashboardEntities">
+          <EntitySetMapping Name="Attendances">
+            <EntityTypeMapping TypeName="CYJDashboardModel.Attendance">
+              <MappingFragment StoreEntitySet="Attendance">
+                <ScalarProperty Name="Attendance_ID" ColumnName="Attendance_ID" />
+                <ScalarProperty Name="Enrollment_ID" ColumnName="Enrollment_ID" />
+                <ScalarProperty Name="Dosage_ID" ColumnName="Dosage_ID" />
+                <ScalarProperty Name="Prevention_ID" ColumnName="Prevention_ID" />
+                <ScalarProperty Name="Growth_ID" ColumnName="Growth_ID" />
+                <ScalarProperty Name="Recovery_ID" ColumnName="Recovery_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dashboards">
+            <EntityTypeMapping TypeName="CYJDashboardModel.Dashboard">
+              <MappingFragment StoreEntitySet="Dashboard">
+                <ScalarProperty Name="Dashboard_ID" ColumnName="Dashboard_ID" />
+                <ScalarProperty Name="ServiceDelivery_ID" ColumnName="ServiceDelivery_ID" />
+                <ScalarProperty Name="CorpsMemberExp_ID" ColumnName="CorpsMemberExp_ID" />
+                <ScalarProperty Name="ExternalAffairs_ID" ColumnName="ExternalAffairs_ID" />
+                <ScalarProperty Name="Revenue_ID" ColumnName="Revenue_ID" />
+                <ScalarProperty Name="OperationsExpense_ID" ColumnName="OperationsExpense_ID" />
+                <ScalarProperty Name="RAD_ID" ColumnName="RAD_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Enrollments">
+            <EntityTypeMapping TypeName="CYJDashboardModel.Enrollment">
+              <MappingFragment StoreEntitySet="Enrollment">
+                <ScalarProperty Name="Enrollment_ID" ColumnName="Enrollment_ID" />
+                <ScalarProperty Name="AnnualGoal" ColumnName="AnnualGoal" />
+                <ScalarProperty Name="BestofCYGoal" ColumnName="BestofCYGoal" />
+                <ScalarProperty Name="Q1Goal" ColumnName="Q1Goal" />
+                <ScalarProperty Name="Q1Actual" ColumnName="Q1Actual" />
+                <ScalarProperty Name="Q2Goal" ColumnName="Q2Goal" />
+                <ScalarProperty Name="Q2Actual" ColumnName="Q2Actual" />
+                <ScalarProperty Name="Q3Goal" ColumnName="Q3Goal" />
+                <ScalarProperty Name="Q3Actual" ColumnName="Q3Actual" />
+                <ScalarProperty Name="Q4Goal" ColumnName="Q4Goal" />
+                <ScalarProperty Name="Q4Actual" ColumnName="Q4Actual" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceDeliveries">
+            <EntityTypeMapping TypeName="CYJDashboardModel.ServiceDelivery">
+              <MappingFragment StoreEntitySet="ServiceDelivery">
+                <ScalarProperty Name="ServiceDelivery_ID" ColumnName="ServiceDelivery_ID" />
+                <ScalarProperty Name="ELA_ID" ColumnName="ELA_ID" />
+                <ScalarProperty Name="Math_ID" ColumnName="Math_ID" />
+                <ScalarProperty Name="Attendance_ID" ColumnName="Attendance_ID" />
+                <ScalarProperty Name="Behavior_ID" ColumnName="Behavior_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

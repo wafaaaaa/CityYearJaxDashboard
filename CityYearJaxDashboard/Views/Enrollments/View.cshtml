@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+<h2>Goals</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Q1 Goal
+        </th>
+        <th>
+            Q1 Actual
+        </th>
+        <th>
+            Q2 Goal
+        </th>
+        <th>
+            Q2 Actual
+        </th>
+        <th>
+            Q3 Goal
+        </th>
+        <th>
+            Q3 Actual
+        </th>
+        <th>
+            Q4 Goal
+        </th>
+        <th>
+            Q4 Actual
+        </th>
+        <th>
+            Best of CY Goal
+        </th>
+        <th>
+            Annual Goal
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q1Goal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q1Actual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q2Goal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q2Actual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q3Goal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q3Actual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q4Goal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Q4Actual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnnualGoal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BestofCYGoal)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Enrollment_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Enrollment_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Enrollment_ID })
+            </td>
+        </tr>
+    }
+
+</table>
+

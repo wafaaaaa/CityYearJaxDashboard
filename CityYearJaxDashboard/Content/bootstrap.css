@@ -6813,4 +6813,23 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+
+
+
+
+
+    .container2 {
+        position: relative;
+        width: 500px;
+        background: red;
+        overflow: hidden; /*To get your parent to respect the floated divs*/
+    }
+
+    .one, .two, .three {
+        position: relative;
+        width: 33.33333333333333%; /*Because you only have 3 elements (100 divided by 3)*/
+        height: 300px;
+        float: left; /*To get them next to each other if all else fails*/
+        background: green;
+    }
 }

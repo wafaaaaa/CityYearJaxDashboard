@@ -2,40 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title - CYJ</title>
-    @Styles.Render("~/content/bootstrap.css")
+    @Styles.Render("~/Content/css/simple-sidebar.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("CYJ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Service Delivery", "Index", "Enrollments")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - City Year Jacksonville</p>
-        </footer>
-    </div>
+    <ul class="w3-sidebar w3-bar-block w3-round-medium w3-red" style="width:20%">
+        <li class="w3-bar-item w3-button">@Html.ActionLink("Home", "Index","Home")</li>
+        <li class="w3-bar-item w3-button">@Html.ActionLink("Service Delivery", "Index", "Enrollments")</li>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    </ul>
+
+    <div style="margin-left:30%">
+
+            
+    </div>
+    @RenderBody()
 </body>
 </html>

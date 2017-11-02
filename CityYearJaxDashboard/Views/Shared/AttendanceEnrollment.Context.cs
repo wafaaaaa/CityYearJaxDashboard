@@ -14,7 +14,7 @@ namespace CityYearJaxDashboard.Views.Shared
     using System.Data.Entity.Infrastructure;
     
     public partial class CYJDashboardEntities : DbContext
-    {
+    {                                        
         public CYJDashboardEntities()
             : base("name=CYJDashboardEntities")
         {

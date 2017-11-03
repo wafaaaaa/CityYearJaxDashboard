@@ -1,0 +1,65 @@
+﻿@model DCPSRevenueManagement.Models.DCPSRevenueTable
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DCPSRevenueTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter5)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

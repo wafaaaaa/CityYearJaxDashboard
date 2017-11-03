@@ -14,6 +14,7 @@
         <br />
         <Center><img src="~/content/images/CITYYEARLOGO.png" alt="LOGO" width="150" height="150"/></center>
      <ul>
+        <li class="w3-bar-item w3-button">@Html.ActionLink("About", "Index", "About")</li>
         <li class="w3-bar-item w3-button">@Html.ActionLink("Home", "Index","Home")</li>
         <li class="w3-bar-item w3-button">@Html.ActionLink("Service Delivery", "Index", "Enrollments")</li>
         <li class="w3-bar-item w3-button">@Html.ActionLink("Corps Member Experience", "Index", "Home")</li>
@@ -31,5 +32,10 @@
             
     </div>
     @RenderBody()
+
+    <div class="footer">
+        City Year Jacksonville 2017 
+    </div>
 </body>
+
 </html>

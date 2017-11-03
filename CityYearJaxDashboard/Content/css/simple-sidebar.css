@@ -1613,3 +1613,11 @@ a {
 .w3-border-grey, .w3-hover-border-grey:hover, .w3-border-gray, .w3-hover-border-gray:hover {
     border-color: #bbb !important
 }
+.footer {
+    position: absolute;
+    height: 20px;
+    width: 99%;
+    margin: auto;
+    bottom: 0px;
+    text-align: center;
+}

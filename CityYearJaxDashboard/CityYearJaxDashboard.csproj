@@ -239,6 +239,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\simple-sidebar.css" />
     <Content Include="Content\gulpfile.js" />
+    <Content Include="Content\images\CITYYEARLOGO.png" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />

@@ -242,6 +242,7 @@
     <Content Include="Content\gulpfile.js" />
     <Content Include="Content\images\CITYYEARLOGO.png" />
     <Content Include="Content\images\Jacksonville.jpg" />
+    <Content Include="Content\images\user_icon.png" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />

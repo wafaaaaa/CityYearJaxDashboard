@@ -19,7 +19,7 @@
         // draws it.
         function drawChart() {
 
-            // Create the data table.
+            // Create the data table. 1
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Corp Member Experience');
             data.addColumn('number', 'P');
@@ -27,9 +27,9 @@
                 ['AmeriCorps Retention', 3],
                 ['ACM Net Promoter Score', 1],
                 ['Team Leaders', 1],
-                ['Z2nd Year ACM', 1],
+                ['2nd Year ACM', 1],
             ]);
-            // Create the data table.
+            // Create the data table. 2
             var data2 = new google.visualization.DataTable();
             data2.addColumn('string', 'Topping');
             data2.addColumn('number', 'Slices');
@@ -40,6 +40,7 @@
                 ['Volunteers Engaged', 1],
             ]);
 
+            //create the table 3
             var data3 = new google.visualization.DataTable();
             data3.addColumn('string', 'Quarter');
             data3.addColumn('number', 'ELA');
@@ -51,26 +52,80 @@
                 ['Q3', 860, 580],
                 ['Q4', 1030, 540]
             ]);
+            
+            //table 4 
+            var data4 = new google.visualization.arrayToDataTable([
+                ['Goal', 'Category'],
+                ['Revenue Goal', 11],
+                ['Key Constituent Giving Rates', 2],
+                ['Donor Retention Rate', 2],
+                ['Number of Donors', 2],
+            ]);
 
-            // Set chart options
+            //table 5 
+            var data5 = new google.visualization.DataTable();
+            data5.addColumn('string', 'Budget');
+            data5.addColumn('number', 'Expense Management');
+            data5.addColumn('number', 'Net Promoter Score');
+
+            data5.addRows([
+                ['Q1', 10000, 10000],
+                ['Q2', 23432, 12343],
+                ['Q3', 34322, 42344],
+                ['Q4', 64565, 45467]
+            ]);
+
+            //table 6 
+            var data6 = new google.visualization.DataTable();
+            data6.addColumn('string', 'RAD');
+            data6.addColumn('number', 'Progress');
+            data6.addRows([
+                ['Applications to Jacksonville', 415],
+                ['Number of offers', 171],
+                ['Number of confirmations', 111]
+  
+            ]);
+
+            // Set chart options 1
             var options = {
                 'title': 'CORP MEMBER EXPERIENCE',
                 'width': 400,
                 'height': 300
             };
-            // Set chart options
+            // Set chart options 2
             var options2 = {
                 'title': 'EXTERNAL AFFAIRS',
                 'width': 400,
                 'height': 300
             };
-            // Set chart options
+            // Set chart options 3
             var options3 = {
                 'title': 'SERVICE DELIVERY',
                 'width': 400,
                 'height': 300
             };
 
+            //options 4
+            var options4 = {
+                title: 'Revenue',
+                pieHole: 0.4,
+                'width': 400,
+                'height': 300
+            };
+
+            // Set chart options 5
+            var options5 = {
+                'title': 'OPEX',
+                'width': 400,
+                'height': 300
+            };
+
+            //options 6 
+            var options6 = {
+                'title': 'RAD',
+                'width': 400,
+                'height': 300
+            };
             // Instantiate and draw our chart, passing in some options.
             var chart3 = new google.visualization.LineChart(document.getElementById('chart_div3'));
             chart3.draw(data3, options3);
@@ -81,7 +136,16 @@
             chart.draw(data, options);
 
 
+            var chart4 = new google.visualization.PieChart(document.getElementById('chart_div4'));
+            chart4.draw(data4, options4);
+
+            var chart5 = new google.visualization.LineChart(document.getElementById('chart_div5'));
+            chart5.draw(data5, options5);
+
+            var chart6 = new google.visualization.BarChart(document.getElementById('chart_div6'));
+            chart6.draw(data6, options6);
         }
+
     </script>
 </head>
 
@@ -93,6 +157,15 @@
             <td><div id="chart_div" style="border: 1px solid #ccc"></div></td>
             <td><div id="chart_div2" style="border: 1px solid #ccc"></div></td></tr>
         </table>
+
+    <br />
+    <table class="columns" style="margin-left:12%">
+        <tr>
+            <td><div id="chart_div4" style="border: 1px solid #ccc"></div></td>
+            <td><div id="chart_div5" style="border: 1px solid #ccc"></div></td>
+            <td><div id="chart_div6" style="border: 1px solid #ccc"></div></td>
+        </tr>
+    </table>
 
 </body>
 </html>

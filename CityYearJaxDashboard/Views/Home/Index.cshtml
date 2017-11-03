@@ -1,9 +1,4 @@
 ﻿
-<br />
-<br />
-<br />
-<br />
-
 <center><h1>City Year Jacksonville - Dashboard Overview</h1></center>
 <html>
 
@@ -72,8 +67,8 @@
             // Set chart options
             var options3 = {
                 'title': 'SERVICE DELIVERY',
-                'width': 900,
-                'height': 200
+                'width': 400,
+                'height': 300
             };
 
             // Instantiate and draw our chart, passing in some options.
@@ -82,9 +77,9 @@
             var chart2 = new google.visualization.PieChart(document.getElementById('chart_div2'));
             chart2.draw(data2, options2);
 
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
             chart.draw(data, options);
-          
+
 
         }
     </script>
@@ -93,14 +88,11 @@
 <body>
     <!--Divs that will hold the charts-->
 
-    <div class="container2">
-    </div>
-            <div class="one" id="chart_div3" style="margin-left:30%"> 
-            <div class="three" id="chart_div" style="margin-left:30%">
-            </div>
-            <div class="two" id="chart_div2" style="margin-left:30%">
-            </div>
-        </div>
+    <table class="columns" style="margin-left:12%">
+            <tr><td><div id="chart_div3" style="border: 1px solid #ccc"></div></td>
+            <td><div id="chart_div" style="border: 1px solid #ccc"></div></td>
+            <td><div id="chart_div2" style="border: 1px solid #ccc"></div></td></tr>
+        </table>
 
 </body>
 </html>

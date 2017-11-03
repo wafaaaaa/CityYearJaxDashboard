@@ -1,0 +1,59 @@
+﻿@model DCPSRevenueManagement.Models.DCPSRevenueTable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DCPSRevenueTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quarter5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quarter5)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

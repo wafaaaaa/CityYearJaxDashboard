@@ -16,7 +16,7 @@
             list-style-type: none;  
             margin: 0;
             padding: 0;
-            width: 30%;
+            width: 35%;
             background-color: #f1f1f1;
             position: static;
             height: 70%;
@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <div class="container3">
+    <div class="container2" style="margin-left:21%"
     <h2>Service Delivery</h2><br />
     <ul class="list">
         @* <li><a class="active" href="#home">Home</a></li>
@@ -56,14 +56,14 @@
         <li><input type="checkbox" id="q4actual" value="q4actual"> Q4 Actual</li>
         <li><input type="checkbox" id="bestofcy" value="bestofcy"> Best of City Year </li>
         <li><input type="checkbox" id="annual" value="annual"> Annual </li>
-    </ul></div>
+    </ul>
     <br />
     <input type="reset" />
     <input type="button" value="Generate" onclick="" />
     <hr />
     <h2>Goals</h2>
     <p>
-      Create New | Edit | Details | Delete
+        @Html.ActionLink("Create New", "Enrollments")
     </p>
     <table class="table">
         <tr>
@@ -101,7 +101,7 @@
             <th></th>
         </tr>
 
-       @*@foreach (var item in Model)
+       @foreach (var item in Model)
         {
             <tr>
                 <td>
@@ -141,9 +141,9 @@
                 </td>
             </tr>
         }
-           *@
+          
     </table>
-
+    </div>
 </body>
 </html>
 
